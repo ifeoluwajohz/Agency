@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+}
+.welcome{
+    background: url(../assets/paint.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    margin: 6em;
+}
+.show{
+    background: url(../assets/img.jpg);
+    background-position: center center;
+    background-size: cover;
+    max-height: 90%;
+    margin: 0px;
+    padding: 0px 20px;
+    opacity: 0.6;
+}
+
+.showcase{
+    display: flex;
+    justify-content: space-between;
+    .img{
+        width: 45%;
+    }
+}
+@media (max-width: 1024px) {
+
+    .show{
+        margin: 10px 0px;
+        max-height: 500px;
+        text-align: center;
+        h1{
+            font-size: 3.4em;
+        }
+    }
+
+    .showcase{
+        display: block;
+        margin: 0px;
+
+        .img{
+            width: 90%;
+        }
+        h1{
+            font-size: 2.4em;
+        }
+        p{
+            margin-top: 5px;
+            font-size: 1em;
+        }
+    }
+    .service{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        padding: 5px;
+
+    }
+    .footer{
+        padding: 0px;
+        flex-wrap: wrap;
+        .logo, .subscribe, .info{
+            padding: 0px;
+            margin-bottom: 3rem;
+        }
+        
+    }
+
+    
+  }

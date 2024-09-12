@@ -1,0 +1,33 @@
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 800 */
+
+.suse-font {
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: bold;
+}
+
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+*{
+  padding: 0px;
+  margin: 0px;
+}
+#root{
+  margin: 0 0.6rem;
+  padding: 0.6rem;
+  font-family: "SUSE";
+}
+
+
+@media (max-width: 1024px) {
+  #root {
+    padding: 0rem;
+  }
+}
