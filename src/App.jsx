@@ -2,7 +2,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import Navbar from './components/Navbar'
 import Welcome from './components/Welcome'
-import Services from './components/Services'
 import Faq from './components/Faq'
 import Footer from './components/Footer'
 
@@ -16,7 +15,6 @@ function App() {
       <div id="main">
         <Navbar />  
         <Welcome />
-        <Services />
         <Faq />
         <Footer />
       </div>
