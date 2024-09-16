@@ -1,6 +1,10 @@
 *{
     margin: 0;
 }
+
+.heading{
+    line-height: 2.2;
+}
 .show{
     background: url(../assets/key.jpg);
     background-position: center center;
@@ -9,6 +13,14 @@
     margin: 0px;
     padding: 0px 20px;
     opacity: 0.9;
+}
+.welcomes{
+    background: url(../assets/desk2.jpg);
+    background-position: center center;
+    background-size: cover;
+    max-height: 90%;
+    padding: 0px 20px;
+    opacity: 0.8;
 }
 
 .quote{

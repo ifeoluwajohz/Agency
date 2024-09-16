@@ -47,7 +47,8 @@ const Welcome = () => {
 
   return (
     <>
-    <div className="show text-center px-4 md:px-30 md:text-center py-10 md:p-40 md:py-20 mt-1 md:mt-1">
+    
+    <div className="show text-center px-4 md:px-30 md:text-center py-10 md:p-20 md:py-20">
       <h1 className="mt-1  text-white md:text-6xl font-bold">Developments <span className="text-yellow-400"> On-going</span> </h1>
       <p className="mt-10 text-base text-white">Welcome sir/ma we are happy to inform you that pur agency platform is under development is atque aperiam at sapiente, vitae qui voluptate esse quis facere magnam, nostrum fugiat aliquid laboriosam maxime.  </p>
       <button className="transition-all duration-500 bg-yellow-500 hover:bg-yellow-600 my-6 py-2 px-12 font-semibold rounded-md text-white">Hire Us</button>

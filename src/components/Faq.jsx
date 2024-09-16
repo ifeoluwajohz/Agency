@@ -36,7 +36,7 @@ const Faq = () => {
             </button>
           </div>
           {openIndex === index && (
-            <div className="mt-4 text-gray-500 text-lg text-center flex-wrap px-0 lg:px-60">
+            <div className="mt-4 text-gray-500 text-lg text-left flex-wrap px-0 lg:px-60">
               <p>{faq.answer}</p>
             </div>
           )}
