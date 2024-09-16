@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
     
-    <div className="text-center mt-8 px-4  md:px-20">
+    <div className="text-center mt-8 px-0  md:px-10">
       <div className="welcomes py-16 px-4 md:px-16 my-5">
         <p className=" text-gray-100 text-4xl md:text-5xl font-bold leading-snug md:leading-snug">A Full Service <span className="text-yellow-600"> Integrated</span> Consulting Company where Technology meets Marketing.</p>
         <p className="text-base lg:text-lg text-gray-100 my-6 leading-7 lg:leading-9">We build webapps that are optimized for both search engines and users. Our team provides comprehensive design, development, and maintenance solutions.</p>
