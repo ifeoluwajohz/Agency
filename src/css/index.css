@@ -2,6 +2,10 @@
   margin: 0;
 }
 
+.headings {
+  font-size: 4em;
+}
+
 .show {
   background: url(../assets/key.jpg);
   background-position: center center;
@@ -18,7 +22,7 @@
   background-size: cover;
   max-height: 90%;
   padding: 0px 20px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .quote {
@@ -26,6 +30,15 @@
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.about {
+  background: url(../assets/connected.jpg);
+  background-position: center bottom;
+  background-size: cover;
+  max-height: 90%;
+  padding: 0px 20px;
+  opacity: 0.8;
 }
 
 .showcase {
@@ -58,7 +71,7 @@
   }
 }
 .lastflex {
-  color: #a80ccf;
+  color: #91812b;
 }
 .lastflex p:hover {
   text-decoration: underline;

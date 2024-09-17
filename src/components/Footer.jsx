@@ -49,10 +49,10 @@ const Footer = () => {
         <div className="last mb-2 mt-1 p-4 flex text-center flex-col-reverse px-8 md:px-12 bg-gray-200 text-gray-600 md:flex-row  md:justify-between">
           <p className="ml:2 md:ml-10 text-left ">2024 <span className="text-black"> BrandName.</span>All Rights Reserved. </p>
           <div className="lastflex flex text-xs leading-10 items-center flex-wrap md:text-sm ml:2 md:ml-10 mb-8 md:mb-0">
-            <p className="pr-4 hover:text-purple-500">WHO WE ARE</p>|
-            <p className="px-4 hover:text-purple-500">OUR WORK</p>|
-            <p className="px-4 leading-loose hover:text-purple-500">OUR PARTNERS</p>|
-            <p className="px-1 sm:px-4 hover:text-purple-500">CAPABILITIES</p>
+            <p className="pr-4">WHO WE ARE</p>|
+            <p className="px-4">OUR WORK</p>|
+            <p className="px-4 leading-loose">OUR PARTNERS</p>|
+            <p className="px-1 sm:px-4">CAPABILITIES</p>
           </div>
         </div>
     </div>

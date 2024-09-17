@@ -36,7 +36,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className={`lg:hidden transition-all duration-700 z-40 mx-0 md:mx-8 ease-in-out ${isOpen ? 'max-h-screen' : 'max-h-0 overflow-hidden'}`}>
+      <div className={`lg:hidden transition-all duration-500 z-40 mx-0 md:mx-8 ease-in-out ${isOpen ? 'max-h-screen' : 'max-h-0 overflow-hidden'}`}>
         <Link to="/" className="block transition-all duration-500 px-1 md:px-4 py-2 mx-6 md:mx-8 font-medium text-gray-800 hover:text-gray-900 hover:bg-yellow-100 focus:underline">Home</Link>
         <Link to="/about" className="block transition-all duration-500 px-1 md:px-4 mx-6 md:mx-8 font-medium py-2 text-gray-800 hover:text-gray-900 hover:bg-yellow-100 focus:underline">About us</Link>
         <Link to="/faq" className="block transition-all duration-500 px-1 md:px-4 mx-6 md:mx-8 font-medium py-2 text-gray-800 hover:text-gray-900 hover:bg-yellow-100 focus:underline">Faq's</Link>

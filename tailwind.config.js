@@ -3,6 +3,8 @@ export default {
   content: [
     "./src/App.jsx",
     "./src/components/Home.jsx",
+    "./src/components/About.jsx",
+
 
     "./src/components/Navbar.jsx",
     "./src/components/Welcome.jsx",
