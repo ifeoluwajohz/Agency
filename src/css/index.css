@@ -25,15 +25,8 @@
   opacity: 0.9;
 }
 
-.quote {
-  background: url(../assets/img.jpg);
-  background-position: center bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .about {
-  background: url(../assets/connected.jpg);
+  background: url(../assets/yellow.jpg);
   background-position: center bottom;
   background-size: cover;
   max-height: 90%;
@@ -60,6 +53,18 @@
 .loading-indicator.loading {
   border-color: #3498db;
   animation: border-spin 1s linear infinite;
+}
+
+.bg-img {
+  background: url(../assets/desk2.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding: 20px;
+}
+@media (max-width: 1024px) {
+  .bg-img {
+    padding: 10px;
+  }
 }
 
 @keyframes spin {
@@ -91,8 +96,8 @@
     line-height: 1.2;
   }
   .quote {
-    background: url(../assets/img.jpg);
-    background-position: center top;
+    background: url(../assets/scatter.jpg);
+    background-position: center bottom;
     background-size: cover;
     background-repeat: no-repeat;
   }

@@ -9,6 +9,7 @@ export default {
     "./src/components/Navbar.jsx",
     "./src/components/Welcome.jsx",
     "./src/components/Services.jsx",
+    "./src/components/Previous_project.jsx",
     "./src/components/Faq.jsx",
     "./src/components/Footer.jsx"
   ],
