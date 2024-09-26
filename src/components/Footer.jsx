@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 import twitter from '../assets/icons/twitter.png'
 import facebook from '../assets/icons/facebook.png'
 
@@ -42,15 +44,14 @@ const Footer = () => {
             <form className="mb-0 flex">
               <input type="email" className="px-4 py-2 focus:outline-gray-300" placeholder='Email Address'/>
               <button className="bg-yellow-500 w-11 items-center text-center"><img src={send} className="w-10 p-3" alt="subscribe-button" /></button>
-
             </form>
           </div>
         </div>
         <div className="last mt-1 p-4 flex text-center flex-col-reverse px-8 md:px-12 bg-gray-200 text-gray-600 md:flex-row  md:justify-between">
           <p className="ml:2 md:ml-10 text-left ">2024 <span className="text-black"> BrandName.</span>All Rights Reserved. </p>
           <div className="lastflex flex text-xs leading-10 items-center flex-wrap md:text-sm ml:2 md:ml-10 mb-8 md:mb-0">
-            <p className="pr-4">WHO WE ARE</p>|
-            <p className="px-4">OUR WORK</p>|
+            <Link to="/about"><p className="px-4">WHO WE ARE</p></Link>|
+            <Link to="/service"><p className="px-4">SERVICES</p></Link>|
             <p className="px-4 leading-loose">OUR PARTNERS</p>|
             <p className="px-1 sm:px-4">CAPABILITIES</p>
           </div>

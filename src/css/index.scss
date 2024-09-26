@@ -21,15 +21,9 @@
     background-size: cover;
     max-height: 90%;
     padding: 0px 20px;
+    color: #c93991;
     opacity: 0.9;
 }
-
-// .quote{
-//     background: url(../assets/scatter.jpg);
-//     background-position: center bottom;
-//     background-size: cover;
-//     background-repeat: no-repeat;
-// }
 
 .about {
     background: url(../assets/yellow.jpg);
@@ -61,8 +55,8 @@
   
 
   .bg-img{
-    background: url(../assets/desk2.jpg);
-    background-position: center center;
+    background: url(../assets/community.jpg);
+    background-position: center top;
     background-size: cover;
     padding: 20px;
     @media (max-width: 1024px) {
@@ -82,6 +76,19 @@
         }
     }
   }
+
+  .packages{
+
+    align-items: flex-end;
+  }
+//   .display-program {
+//     position: relative;
+//     z-index: 10; /* Ensure it sits above other elements */
+//     background-color: rgba(255, 255, 255, 0.9); /* Light background for contrast */
+//     border: 2px solid #ccc; /* Border for definition */
+//     padding: 20px; /* Add some space around the content */
+// }
+
 
 @media (max-width: 1024px) {
 

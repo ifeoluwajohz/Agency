@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import img1 from '../assets/img.jpg';
 import img2 from '../assets/key.jpg';
 import img3 from '../assets/desk2.jpg';
-import img4 from '../assets/code2.jpg';
-import img5 from '../assets/code.jpg';
-import img6 from '../assets/tech.jpg';
+import img4 from '../assets/code.jpg';
+import img5 from '../assets/yellow.jpg';
+import img6 from '../assets/climax.jpg';
 
 
 

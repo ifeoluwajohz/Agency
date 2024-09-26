@@ -22,6 +22,7 @@
   background-size: cover;
   max-height: 90%;
   padding: 0px 20px;
+  color: #c93991;
   opacity: 0.9;
 }
 
@@ -56,8 +57,8 @@
 }
 
 .bg-img {
-  background: url(../assets/desk2.jpg);
-  background-position: center center;
+  background: url(../assets/community.jpg);
+  background-position: center top;
   background-size: cover;
   padding: 20px;
 }
@@ -80,6 +81,10 @@
 }
 .lastflex p:hover {
   text-decoration: underline;
+}
+
+.packages {
+  align-items: flex-end;
 }
 
 @media (max-width: 1024px) {
