@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-0 px-4 sm:px-6 md:mx-12 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <div className="font-extrabold text-yellow-500 text-xl p-2">
+            <div className="font-extrabold text-yellow-700 text-xl p-2">
               <Link to='/'>VIRALL</Link>
             </div>
           </div>
@@ -28,7 +28,7 @@ const Navbar = () => {
             <button className="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-1 px-1 md:px-6">Let's Talk</button>
           </div>
           <div className="md:hidden flex items-center">
-            <button onClick={toggleMenu} className="text-gray-400 focus:border">
+            <button onClick={toggleMenu} className="text-gray-900 focus:border">
               <svg className="h-6 w-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
               </svg>

@@ -31,7 +31,7 @@ const Services = () => {
         <div className="digital-marketing my-1 flex flex-col md:flex-row items-center bg-gradient-to-r from-cyan-700 to-green-700">
             <img src={img} alt="" className="bg-contain h-full md:h-96 w-full md:w-1/2" />
             <div className="details px-3 md:px-6 text-white text-left">
-                <h1 className="text-4xl font-bold mt-5">Digital <span className="text-green-500">Marketing</span></h1>
+                <h1 className="text-4xl font-bold mt-5">Graphics & <span className="text-green-500">Designs</span></h1>
                 <p className="my-6 mb-10 leading-7 ">Ignite your brand's digital impact with our dynamic marketing strategies that fuse creativity and precision. By harnessing data-driven insights, we propel businesses to the forefont of the digital landscape.</p>
                 <div className="packages">
                 <div className="features">
@@ -39,29 +39,30 @@ const Services = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" className="w-8 pr-4">
                             <path d="M90,50 L10,10 L10,90 Z" fill="#c93991"/>
                         </svg>
-                        <p>Advertising</p>
+                        <p>Graphics Designs</p>
                     </div>
                     <div className="flex mb-3">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" className="w-8 pr-4">
                             <path d="M90,50 L10,10 L10,90 Z" fill="#c93991"/>
                         </svg>
+
                         <p>Branding</p>
                     </div>
                     <div className="flex mb-3">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" className="w-8 pr-4">
                             <path d="M90,50 L10,10 L10,90 Z" fill="#c93991"/>
                         </svg>
-                        <p>Social Media Marketing</p>
+                        <p>Ui/Ux design</p>
                     </div>
                     <div className="flex mb-6">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" className="w-8 pr-4">
                             <path d="M90,50 L10,10 L10,90 Z" fill="#c93991"/>
                         </svg>
-                        <p>Search Engine Optimazation </p>
+                        <p>Prototyping</p>
                     </div>
                 </div>
                 <div className="mb-1 text-center">
-                    <p onClick={toggleMenu} className="bg-white p-2 text-pink-500 font-bold hover:bg-pink-600 hover:text-white transition-all duration-800">View Package</p>
+                    <p onClick={toggleMenu} className="bg-white p-2 text-pink-500 font-bold hover:bg-pink-700 hover:text-white transition-all duration-800">{isDigital ? 'View Package' : 'Unview Package'}</p>
                 </div>
                 </div>
             </div>
@@ -72,7 +73,7 @@ const Services = () => {
         <div className="web-development flex flex-col md:flex-row items-center bg-gradient-to-r from-gray-900 to-yellow-700">
             <img src={young} alt="" className="bg-contain h-full md:h-96 w-full md:w-1/2" />
             <div className="details px-3 md:px-6 text-white text-left">
-                <h1 className="text-4xl font-bold mt-5">Web Design & Web <span className="text-yellow-500"> Development</span></h1>
+                <h1 className="text-4xl font-bold mt-5">Web <span className="text-yellow-500"> Development</span></h1>
                 <p className="my-6 mb-10 leading-7 ">Ignite your brand's digital impact with our dynamic marketing strategies that fuse creativity and precision. By harnessing data-driven insights, we propel businesses to the forefont of the digital landscape.</p>
                 <div className="packages">
                 <div className="features">
