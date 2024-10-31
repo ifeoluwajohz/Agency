@@ -1,0 +1,13 @@
+[
+    {
+      "imgSrc": "./images/john.jpg",
+      "title": "John Doe",
+      "role": "Software Developer"
+    },
+    {
+      "imgSrc": "./images/jane.jpg",
+      "title": "Jane Smith",
+      "role": "Product Designer"
+    }
+  ]
+  

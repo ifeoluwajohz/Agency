@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import icon1 from '../assets/responsive.png';
+import icon1 from '../assets/arrow.png';
 import icon2 from '../assets/arrow.png';
 
 import '../css/index.css'

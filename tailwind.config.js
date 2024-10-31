@@ -13,6 +13,8 @@ export default {
     "./src/components/Faq.jsx",
     "./src/components/Briefdigital.jsx",
     "./src/components/Briefdev.jsx",
+    "./src/components/HomeSub.jsx",
+
 
     "./src/components/Footer.jsx"
   ],

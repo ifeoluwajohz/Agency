@@ -26,17 +26,17 @@ const Faq = () => {
     <div className="text-center p-4 md:p-8">
       <h1 className="text-2xl font-semibold">Frequently Asked Questions (FAQs)</h1>
       {faqs.map((faq, index) => (
-        <div key={index} className="text-xl faq my-10">
+        <div key={index} className="md:text-xl text-lg faq my-6">
           <div onClick={() => toggleMenu(index)} className="flex justify-between mx-0 lg:mx-60">
             <p>{faq.question}</p>
-            <button className="text-gray-400 focus:border">
+            <button className="text-black focus:border">
               <svg className={`h-6 w-6 transition-transform duration-300 ${openIndex === index ? 'transform rotate-45' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={openIndex === index ? "M5 15l7-7 7 7" : "M19 9l-7 7-7-7"}></path>
               </svg>
             </button>
           </div>
           {openIndex === index && (
-            <div className="mt-4 text-gray-500 text-lg text-left flex-wrap px-0 lg:px-60">
+            <div className="mt-4 text-black md:text-base text-sm text-left flex-wrap px-0 lg:px-60">
               <p>{faq.answer}</p>
             </div>
           )}
