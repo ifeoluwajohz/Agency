@@ -16,7 +16,10 @@ export default {
     "./src/components/HomeSub.jsx",
 
 
-    "./src/components/Footer.jsx"
+    "./src/components/Footer.jsx",
+
+    "./src/pages/ProfileDetail.jsx",
+
   ],
   theme: {
     extend: {},

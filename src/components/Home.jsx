@@ -1,15 +1,29 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 // import logo from '../assets/arrow2.png';
 import logo from '../assets/arrow.png';
 import '../css/index.css'
 import HomeSub from '../components/HomeSub'
 
 const Home = () => {
+  const text = 'MAKE GREAT COMMUNICATION WITH YOUR TEAM';
+  const loadingText = text.slice(-8); // last 8 letters
+  const [displayedText, setDisplayedText] = useState('');
+
+  useEffect(() => {
+    let index = 0;
+
+    const interval = setInterval(() => {
+      setDisplayedText(prev => text.slice(0, -8) + loadingText.slice(0, index + 1));
+      index = (index + 1) % loadingText.length;
+    }, 200); // Adjust speed as needed
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
     <div className="my-20 md:px-12 px-2 text-center">
       <div className="flex flex-col items-center">
-        <h1 className="lg:text-5xl text-4xl md:px-10 px-2 font-normal">MAKE GREAT COMMUNICATION WITH YOUR TEAM</h1>
+      <h1 className="lg:text-5xl text-4xl md:px-10 px-2 font-normal">{displayedText}</h1>
         <p className="md:my-10 my-7 md:mx-20 mx-1 md:text-lg text-base">We build <span className="text-green-400">webapps</span> that are optimized for both search engines and users. Our team provides comprehensive design, development, and maintenance solutions...</p>
         <div className="flex gap-5 text-sm mt-2 md:justify-start justify-center">
           <button className="bg-black text-white py-2 px-8">About us</button>
