@@ -9,7 +9,7 @@ const Faq = () => {
       answer: "Our major services include digital marketing, SEO, content creation, and social media management."
     },
     {
-      question: "How can I contact the agency?",
+      question: "How can i contact the agency?",
       answer: "You can contact us via email at contact@agency.com or call us at (123) 456-7890."
     },
     {

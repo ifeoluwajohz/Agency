@@ -19,6 +19,8 @@ export default {
     "./src/components/Footer.jsx",
 
     "./src/pages/ProfileDetail.jsx",
+    "./src/pages/ProjectDetail.jsx",
+
 
   ],
   theme: {
