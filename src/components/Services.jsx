@@ -22,8 +22,7 @@ const Services = () => {
                 {profiles.map((profile) => (
                     <Link to={`/profile/${profile.title}`}
                         key={profile.id}
-                        className="flex flex-col md:flex-row items-center p-3 border border-gray-300 shadow-lg w-full bg-gradient-to-r text-white mb-1"
-                        style={profile.style}
+                        className="flex flex-col md:flex-row items-center p-3 border border-gray-300 shadow-lg w-full bg-gradient-to-r text-gray-800 mb-1"
                         state={{ detail: profile.detail }}
                     >
                         <img src={profile.imgSrc} alt={profile.title} className="h-full w-full md:h-96 md:w-1/2 object-cover mb-4 md:mb-0" />

@@ -44,12 +44,13 @@ const Home = () => {
         <img className="w-7" src={logo} alt="" />
       </div>
     </div>
-    <div className="lg:flex block md:px-28 px-8 my-20 items-center">
-      <div className="text-sm lg:text-left text-center items-end">
-        <h1 className="text-2xl lg:mb-0 mb-6">GROW YOUR BUSINESS WITH VIRALL</h1>
+    <div className="lg:flex justify-between block md:px-28 gap-8 px-8 my-12 items-center">
+      <div className="text-sm lg:text-left text-center md:w-5/6">
+        <h1 className="text-2xl mb-4 font-semibold">GROW YOUR BUSINESS WITH VIRALL</h1>
+        <p className='text-sm lg:text-left text-center items-end leading-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus in distinctio quaerat magni harum quas expedus beatae commodi asore earum architecto expedita optio quos sint unde, officia temporibus maxime est odit, nulla tenetur debitis doloribus suscipit assumenda quas. Vero, quas?</p>
       </div>
-      <div className="quotes lg:w-4/6 w-6/6">
-        <p className='text-sm lg:text-right text-center items-end '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus in distinctio quaerat magni harum quas expedus beatae commodi asore earum architecto expedita optio quos sint unde, officia temporibus maxime est odit, nulla tenetur debitis doloribus suscipit assumenda quas. Vero, quas?</p>
+      <div className="w-full">
+        <img className="w-full h-36 object-cover my-8" src="https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
       </div>
     </div>
     <Projects />

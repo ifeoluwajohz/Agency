@@ -13,7 +13,7 @@ const HomeSub = () => {
       {profiles.map((profile) => (
         <Link to={`/profile/${profile.title}`}
           key={profile.id}
-          className="flex flex-col items-center text-white p-6 border border-gray-300 rounded-lg shadow-md md:w-5/12 w-full text-center"
+          className="flex flex-col items-center text-white md:p-6 p-3 border border-gray-300 rounded-lg shadow-md md:w-5/12 w-full text-center"
           style={profile.style}
           state={{ detail: profile.detail }}
         >
