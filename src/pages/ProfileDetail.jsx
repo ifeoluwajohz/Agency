@@ -21,8 +21,8 @@ const ProfileDetail = () => {
         />
         <div className="space-y-4 md:ml-8">
           <h1 className="md:text-3xl text-2xl md:my-0 my-8 font-bold text-blue-400 tracking-wider">{title.toUpperCase()}</h1>
-          <p className="md:text-base text-sm text-gray-600">{detail.description}</p>
-          <span className="block text-blue-400 text-lg font-bold mt-2 leading-10">Price Range: {detail.price}</span>
+          <p className="md:text-base text-gray-600 tracking-wide">{detail.description}</p>
+          <span className="block text-blue-400 text-lg font-bold mt-2">Price Range: {detail.price}</span>
         </div>
       </div>
 

@@ -10,7 +10,7 @@ const HomeSub = () => {
     {
       id: 1,
       imgSrc: gd,
-      title: "Graphics Designer",
+      title: "Graphics Design",
       info: "Create stunning visuals and engaging designs.",
       style: { backgroundColor: '#ffc3c3', color: "#681135" },
       gif: gif,
@@ -63,35 +63,47 @@ const HomeSub = () => {
           { label: "Portfolio", url: "https://example.com/product-design" }
         ]
       }
+    },
+    {
+      id: 4,
+      imgSrc: uiux,
+      title: "Product Design",
+      info: "Craft intuitive and engaging user experiences.",
+      style: { backgroundColor: '#f0c3ff', color: "#370344" },
+      gif: gif,
+      detail: {
+        image: uiux,
+        price: "$1500 - $6000",
+        stack: ["Figma", "Sketch", "Adobe XD"],
+        tools: ["Prototyping Kit", "User Testing Software"],
+        description: "As a Product Designer, you will focus on the user's experience and interface design. Your role will involve researching user needs, creating wireframes, and testing prototypes to ensure that the final product not only meets user expectations but also delivers a delightful experience. You'll collaborate closely with developers to bring designs to life.",
+        links: [
+          { label: "Behance", url: "https://behance.net" },
+          { label: "Portfolio", url: "https://example.com/product-design" }
+        ]
+      }
     }
   ];
   
   
 
   return (
-    <div className="flex flex-row flex-wrap justify-center gap-10 p-2 md:mx-6 mx-3">
+    <div className="flex flex-row flex-wrap justify-center md:gap-10 gap-5 p-2 md:mx-6 mx-3">
       {profiles.map((profile) => (
-        <div
+        <Link to={`/profile/${profile.title}`}
           key={profile.id}
           className="flex flex-col items-center text-white p-6 border border-gray-300 rounded-lg shadow-md md:w-5/12 w-full text-center"
           style={profile.style}
+          state={{ detail: profile.detail }}
         >
           <img src={profile.imgSrc} alt={profile.title} className="w-16 h-16 object-cover" />
           <h2 className="my-4 text-xl font-bold">{profile.title}</h2>
-          <p className="text-sm">{profile.desciption}</p>
-          <Link
-            to={`/profile/${profile.title}`}
-            state={{ detail: profile.detail }}
-            className="flex items-center mt-4 gap-3"
-          >
-            <img
-              src={gif}
-              className="w-10 text-center transform transition-transform duration-200 hover:-translate-x-3"
-              alt=""
-            />
+          <p className="text-sm">{profile.info}</p>
+          <Link to={`/profile/${profile.title}`} state={{ detail: profile.detail }} className="flex items-center mt-4 gap-3" >
+            <img src={gif} className="w-10 text-center transform transition-transform duration-200 hover:-translate-x-3" alt="" />
           </Link>
 
-        </div>
+        </Link>
       ))}
     </div>
   );
