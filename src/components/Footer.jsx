@@ -15,13 +15,14 @@ import '../css/index.css'
 const Footer = () => {
   return (
     <div>
-        <div className="footer bg-gray-950 text-white flex justify-between p-6 md:p-16">
+        <div className="footer bg-black text-white flex justify-between p-6 md:p-16">
           <div className="logo left px-8">
             <h1 className="text-3xl mb-8 font-semibold">VIRALL</h1>
             <p className="mb-4 leading-8">We are a dynamic digital agency dedicated to helping businesses thrive in the digital age. With a team of experienced professionals, we provide a wide range of services to elevate your brand and drive results. From web design and development to digital marketing and SEO, we have the expertise to help you achieve your online goals. </p>
             <div className="social flex flex-start">
             <img src={facebook} alt="" className="w-10 pr-4" />
-              <img src={twitter} alt="" className="w-10 pr-4" />
+            
+            <Link to='https://x.com/ifeoluwajohz'><img src={twitter} alt="" className="w-10 pr-4" /></Link>
               <img src={instagram} alt="" className="w-10 pr-4" />
             </div>
           </div>
