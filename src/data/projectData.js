@@ -2,8 +2,8 @@
 
 const img = 'https://images.unsplash.com/photo-1562577309-2592ab84b1bc?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 const displayImg = 'https://images.unsplash.com/photo-1562577309-2592ab84b1bc?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-
-
+const team = 'https://img.freepik.com/free-photo/front-view-woman-posing-her-office-laptop_23-2148908837.jpg?t=st=1730713177~exp=1730716777~hmac=15b3cecd439de353e0cc5d50b3aad50629c9ba2641341b0c107a2ba847f6c97f&w=740'
+const e_commerce = 'https://plus.unsplash.com/premium_photo-1681488262364-8aeb1b6aac56?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 
 const projects = [
     {
@@ -34,7 +34,7 @@ const projects = [
     {
         id: 2,
         title: "Team Productivity Suite",
-        displayImg : displayImg,
+        displayImg : team,
         image: img,
         info: 'We did this and that',
         achievements: [
@@ -59,7 +59,7 @@ const projects = [
     {
         id: 3,
         title: "E-commerce Analytics System",
-        displayImg : displayImg,
+        displayImg : e_commerce,
         image: img,
         info: 'We did this and that',
         achievements: [

@@ -12,7 +12,7 @@ const ProjectDetail = () => {
     return (
         <div className="p-6 min-h-screen md:mx-20 py-12">
             <h1 className="text-4xl font-bold">{project.title}</h1>
-            <img src={project.image} alt={project.title} className="w-full h-96 object-cover mt-4 my-8" />
+            <img src={project.displayImg} alt={project.title} className="w-full h-96 object-cover mt-4 my-8" />
             <p className="mt-4 text-lg">{project.description}</p>
 
             <h2 className="mt-6 text-2xl font-semibold">Achievements</h2>

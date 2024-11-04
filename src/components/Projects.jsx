@@ -19,7 +19,7 @@ const Projects = () => {
                             <img src={project.displayImg} alt={project.title} className="w-full h-32 rounded-md object-cover my-6" />
                             <h3 className="md:text-2xl text-base font-semibold mb-2">{project.title.toUpperCase()}</h3>
                             <p className="text-sm mb-4">{project.info}</p>
-                            <span className="text-indigo-300 hover:underline text-sm">View Project</span>
+                            <span className="text-blue-500 hover:underline text-sm">View Project</span>
                         </div>
                     </Link>
                 ))}
