@@ -1,45 +1,90 @@
-import React, {useState} from 'react'
-const topImg = 'https://img.freepik.com/free-photo/pretty-african-female-photographer-having-fun-with-designers-programmers-office-indoor-photo-laughing-freelance-specialists-fooling-around-conference-hall_197531-3722.jpg?t=st=1730713808~exp=1730717408~hmac=1d6f15030cb9aaf9c99e8bbb940613ce7cef33a4ff150130b9e09782e7042861&w=740'
+import React, { useState } from 'react';
+const topImg = 'https://img.freepik.com/free-photo/pretty-african-female-photographer-having-fun-with-designers-programmers-office-indoor-photo-laughing-freelance-specialists-fooling-around-conference-hall_197531-3722.jpg?t=st=1730713808~exp=1730717408~hmac=1d6f15030cb9aaf9c99e8bbb940613ce7cef33a4ff150130b9e09782e7042861&w=740';
 
-import '../css/index.css'
+import '../css/index.css';
 import profiles from '../data/profilesData';
 const svgIcon = (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" className="w-6 pr-2">
-      <path d="M90,50 L10,10 L10,90 Z" fill="#c93991" />
+    <path d="M90,50 L10,10 L10,90 Z" fill="#c93991" />
   </svg>
 );
 
 const About = () => {
-
-  const [error, setErro] = useState(null)
-  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    recipientEmail: '',
     message: '',
   });
+  const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleChange = (event) => {
     setFormData({
-      ...formData,   
-
+      ...formData,
       [event.target.name]: event.target.value,
     });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();   
-
-    // Handle form submission here, e.g., send data to a server
-    console.log(formData);   
-
-    // Reset form after submission
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+  
+    // Basic client-side validation
+    const validationErrors = {};
+    if (!formData.name) {
+      validationErrors.name = 'Name is required';
+    }
+    if (!formData.recipientEmail) {
+      validationErrors.recipientEmail = 'Recipient email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.recipientEmail)) {
+      validationErrors.recipientEmail = 'Invalid recipient email address';
+    }
+    if (!formData.message) {
+      validationErrors.message = 'Message is required';
+    }
+  
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+  
+    setIsLoading(true);
+    setErrors({});
+  
+    try {
+      const response = await fetch('https://portfolio-backend-ce6g.onrender.com/message', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+  
+      const data = await response.json();
+  
+      // Handle success response (e.g., show success message)
+      setIsSuccess(true);
+  
+      // Clear the form fields immediately after a successful submission
+      setFormData({
+        name: '',
+        recipientEmail: '',
+        message: '',
+      });
+  
+    } catch (error) {
+      console.error(error);
+      // Handle error (e.g., show error message)
+      setErrors({ general: 'An error occurred. Please try again later.' });
+    } finally {
+      setIsLoading(false);
+    }
   };
+  
   return (
     <>
     <img src={topImg} alt="" className="w-full h-36 object-cover object-center" />
@@ -47,7 +92,7 @@ const About = () => {
       <h1 className="text-4xl lg:text-6xl mt-4 font-light">ABOUT US</h1>
       <p className="lg:text-2xl text-lg my-3 font-extrabold text-pink-600">We help business to grow faster and bigger</p>
       <div className="w-full text-black lg:flex block gap-10">
-        <p className="leading-loose font-light">Virall is a results-driven digital agency dedicated to helping businesses thrive in the digital age. Our team of skilled professionals leverages proven strategies to maximize your brand's impact and deliver measurable results.We specialize in a wide range of digital services, including web design and development, digital marketing, branding and identity, social media marketing, content marketing, SEO and SEM, and email marketing.</p>
+        <p className="leading-loose font-light">Virall is a results-driven digital agency dedicated to helping businesses thrive in the digital age. Our team of skilled professionals leverages proven strategies to maximize your brand's impact and deliver measurable results.We specialize in a wide range of digital services, including web design and development, digital marketing, branding and identity, social media marketing, content marketing, SEO and SEM, and recipientEmail marketing.</p>
         <p className="leading-loose font-light">Whether you're a startup or an established enterprise, we have the expertise to help you achieve your digital goals.By combining creativity, innovation, and data-driven insights, we deliver tailored solutions that drive growth and enhance your online presence. Let us help you navigate the complex digital landscape and unlock the full potential of your business.</p>
         
       </div>
@@ -116,21 +161,22 @@ const About = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="border border-gray-300   
- rounded-md px-4 py-2 w-full focus:outline-none focus:border-blue-500"
+          className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:border-blue-500"
         />
+        {errors.name && <p className="error">{errors.name}</p>}
       </div>
       <div className="mb-4">
         <input
-          type="email"
-          id="email"
-          placeholder='Enter your email'
-          name="email"
-          value={formData.email}
+          type="recipientEmail"
+          id="recipientEmail"
+          placeholder='Enter your recipientEmail'
+          name="recipientEmail"
+          value={formData.recipientEmail}
           onChange={handleChange}
           required
           className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:border-blue-500"
         />
+        {errors.recipientEmail && <p className="error">{errors.recipientEmail}</p>}
       </div>
       <div className="mb-4">
         <textarea
@@ -143,10 +189,15 @@ const About = () => {
           required
           className="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:border-blue-500"
         />
+        {errors.message && <p className="error">{errors.message}</p>}
       </div>
-      <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
-        Submit
+      
+      <button type="submit" disabled={isLoading} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
+        {isLoading ? 'Submitting...' : 'Submit'}
       </button>
+
+      {isSuccess && <p className="success">Message sent successfully!</p>}
+      {errors.general && <p className="error">{errors.general}</p>}
     </form>
       </div>
 
