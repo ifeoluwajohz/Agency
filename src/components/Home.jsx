@@ -7,7 +7,7 @@ import HomeSub from '../components/HomeSub'
 import Projects from './Projects'
 
 const Home = () => {
-  const text = "Reimagine Your Digital Future, Elevated by Virall";
+  const text = "Reimagine Your Digital Future, Elevated by \n Virall";
   const loadingText = text.slice(-8); // last 8 letters
   const [displayedText, setDisplayedText] = useState('');
 
@@ -17,7 +17,7 @@ const Home = () => {
     const interval = setInterval(() => {
       setDisplayedText(prev => text.slice(0, -8) + loadingText.slice(0, index + 1));
       index = (index + 1) % loadingText.length;
-    }, 200); // Adjust speed as needed
+    }, 800); // Adjust speed as needed
 
     return () => clearInterval(interval);
   }, []);
@@ -26,7 +26,7 @@ const Home = () => {
     <div className="my-28 md:px-12 px-2 text-center">
       <div className="flex flex-col items-center">
       <h1 className="lg:text-5xl text-4xl md:px-10 px-2 font-normal">{displayedText.toUpperCase()}</h1>
-        <p className="md:my-10 my-7 md:mx-20 mx-1 md:text-lg text-base">We build <span className="text-green-400">webapps</span> that are optimized for both search engines and users. our team provides comprehensive design, development, and maintenance solutions...</p>
+        <p className="md:my-10 my-7 md:mx-20 mx-1 md:text-lg text-base">We build <span className="text-green-400">webapps</span> that engage users and rank high on search. Our team delivers expert design, development, maintenance solutions, and offers an <span className="text-orange-400">academy</span> to help you master modern web development....</p>
         <div className="flex gap-5 text-sm mt-2 md:justify-start justify-center">
           <Link to="/about" className="bg-black text-white py-2 font-bold px-8">About us</Link>
           <div className="flex items-center hover:underline">
@@ -39,10 +39,10 @@ const Home = () => {
     <div className="trusted md:mx-28 mx-4 text-center mb-10 lg-12">
       <p className="text-xl lg-6 font-bold underline my-4">Trusted by top brands</p>
       <div className="flex gap-10 justify-center">
-        <p className="text-lg text-gray-400">Econnsrent</p>
+        <a href="https://promaketlinksandservices.ng/"><p className="text-lg text-gray-400">ProMarket</p></a>
         <p className="text-lg text-pink-600">Tradedreamsa</p>
         <img className="w-7" src={logo} alt="" />
-        <img className="w-7" src={logo} alt="" />
+        <img className="w-20" src="https://ooozydejaggapckmuidd.supabase.co/storage/v1/object/public/spanish-storage-bucket//Untitled%20design%20(1).png" alt="Spanish-Hotel" />
       </div>
     </div>
     <div className="lg:flex justify-between block md:px-28 gap-8 px-8 my-12 items-center">

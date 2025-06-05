@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="last mt-1 p-4 flex text-center flex-col-reverse px-8 md:px-12 bg-gray-200 text-gray-600 md:flex-row  md:justify-between">
-          <p className="ml:2 md:ml-10 text-left ">2024 <span className="text-black"> BrandName.</span>All Rights Reserved. </p>
+          <p className="ml:2 md:ml-10 text-left ">{new Date().getFullYear()} <span className="text-black"> Virall </span> All Rights Reserved. </p>
           <div className="lastflex flex text-xs leading-10 items-center flex-wrap md:text-sm ml:2 md:ml-10 mb-8 md:mb-0">
             <Link to="/about"><p className="px-4">WHO WE ARE</p></Link>|
             <Link to="/service"><p className="px-4">SERVICES</p></Link>|
