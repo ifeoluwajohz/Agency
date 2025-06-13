@@ -1,8 +1,25 @@
 {
-  "name": "codechat",
+  "name": "Virall Tech Solutions",
   "private": true,
+  "build": "react-scripts build",
+  "postbuild": "react-snap",
+  "description": "Official website of Virall Tech Solutions, a leading provider of innovative tech solutions.",
+  "author": "Virall Tech Solutions",
+  "homepage": "https://viralltechsolutions.vercel.app/",
   "version": "0.0.0",
   "type": "module",
+  "reactSnap": {
+    "inlineCss": true,
+    "puppeteerArgs": [
+      "--no-sandbox"
+    ],
+    "routes": [
+      "/",
+      "/about",
+      "/contact",
+      "/services"
+    ]
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
